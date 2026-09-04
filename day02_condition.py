@@ -33,13 +33,13 @@ if wen_du > 35 and shi_du > 70:
 # 任务 3（挑战）：输入温度和湿度，用 and 组合条件：
 #         温度 25~35 之间 且 湿度 50~80 之间 → 打印"作物生长环境适宜"
 #         否则打印"环境不适宜，请调整"。（提示：判断 25~35 要写 25 <= t <= 35，或者 t >= 25 and t <= 35）
-# score=float(input("成绩；"))
-# if score>=90:
-#     print("优秀")
-# elif score>=60:
-#     print("及格")
-# else:
-#     print("不及格")
+score=float(input("成绩；"))
+if score>=90:
+    print("优秀")
+elif score>=60:
+    print("及格")
+else:
+    print("不及格")
 
 soil=float(input("输入湿度；"))
 if soil<0 or soil>100:
@@ -52,9 +52,9 @@ else:
     print("湿度过大，注意排水")
 
 
-# s=float(input("输入湿度；"))
-# t=float(input("输入温度；"))
-# if 50<=s<=80 and 25<=t<=35:
-#     print("环境适宜")
-# else:
-#     print("环境不适宜，请调整")
+s=float(input("输入湿度；"))
+t=float(input("输入温度；"))
+if 50<=s<=80 and 25<=t<=35:
+    print("环境适宜")
+else:
+    print("环境不适宜，请调整")

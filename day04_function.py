@@ -8,15 +8,15 @@
 # ============ 模仿示例：产量计算器 ============
 # def 函数名(参数): 定义函数。return 把结果交回去。
 # 参数可以有默认值：mian_ji = 1.0 表示调用时不传就用 1.0。
-def cal_chan_liang(mian_ji, mu_chan=800):
-    """计算总产量：面积(亩) × 亩产(斤/亩)"""  # 三引号里是函数的说明文档
-    zong_chan = mian_ji * mu_chan
-    return zong_chan
+# def cal_chan_liang(mian_ji, mu_chan=800):
+#     """计算总产量：面积(亩) × 亩产(斤/亩)"""  # 三引号里是函数的说明文档
+#     zong_chan = mian_ji * mu_chan
+#     return zong_chan
 
-# 调用函数：函数名(实参)。函数的返回值要接住：result = 函数名(...)
-a = cal_chan_liang(2.5, 800)   # 传两个参数
-b = cal_chan_liang(3.2)        # 只传一个，第二个用默认值 800
-print(f"第一块田：{a} 斤，第二块田：{b} 斤")
+# # 调用函数：函数名(实参)。函数的返回值要接住：result = 函数名(...)
+# a = cal_chan_liang(2.5, 800)   # 传两个参数
+# b = cal_chan_liang(3.2)        # 只传一个，第二个用默认值 800
+# print(f"第一块田：{a} 斤，第二块田：{b} 斤")
 
 # ============ 任务区 ============
 # 任务 1：定义一个函数 avg3(x, y, z)，返回三个数的平均值。
@@ -31,3 +31,28 @@ print(f"第一块田：{a} 斤，第二块田：{b} 斤")
 #         否则返回"低温"。然后遍历列表 [12, 28, 40, 5, 20]，
 #         对每个温度调用这个函数，打印"温度 28 度：温暖"这样的格式。
 #         （提示：遍历列表在练习 3 学过，return 一个字符串，print 里拼进去）
+def avg3(x,y,z):
+    pj=((x+y+z)/3)
+    return pj
+a=avg3(10,20,30)
+print(f"平均数为{a}")
+
+def jiao_wen(x):
+    hua_shi=x*9/5+32
+    return hua_shi
+a=jiao_wen(25)
+print(f"此时华氏温度相当于{a}度")
+
+def classify_temperature(t):
+    if t>35:
+        return ("高温")
+    elif t>25:
+        return ("温暖")
+    elif t>=10:
+        return ("适宜")
+    else:
+        return ("寒冷")
+wen_du=[12, 28, 40, 5, 20]
+for t in range(5):
+    a=classify_temperature(wen_du[t])
+    print(f"{wen_du[t]}度,{a}")

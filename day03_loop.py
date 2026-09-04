@@ -36,12 +36,12 @@ for i in yields:
     print(f"田产:{i}斤")
 print(f"平均田产：{sum(yields) / len(yields):.1f}")
 print(f"最高田产:{max(yields)},最低田产:{min(yields)}")
-# # for i in range (10):
-#     print(f"{i+1}的平方是{(i+1)*(i+1)}")
-# for i in range(7):
-#     if yields[i]>900:
-#         print(f"第{i+1}块地的产量为{yields[i]}斤,超过900斤")
+for i in range (10):
+    print(f"{i+1}的平方是{(i+1)*(i+1)}")
+for i in range(7):
+    if yields[i]>900:
+        print(f"第{i+1}块地的产量为{yields[i]}斤,超过900斤")
 
-# for i in yields:
-#     if i >900:
-#         print(f"产量为{i}斤,超过900斤")
+for i in yields:
+    if i >900:
+        print(f"产量为{i}斤,超过900斤")
