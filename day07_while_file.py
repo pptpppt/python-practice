@@ -80,12 +80,15 @@
 # print(f"你输入的次数是{count}")
 total=0
 a=0
-z=-500
+z=0
 with open ("records.txt","r",encoding="utf-8")as f:
     for line in f:
       t=float(line.strip())
-      if z<t:
+      if total==0:
          z=t
+      else:
+          if z<t:
+             z=t
       total=total+1
       a=a+t
 p=a/total
