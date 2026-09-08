@@ -66,18 +66,18 @@
 #         提示2：又用累加器：total = 0，每读一条就 total = total + t，
 #                平均 = total / 条数；最高温可以用 max() 或自己比大小
 
-# count = 0
-# while True:
-#     answer=input("请输入温度(输入q退出)：")
-#     print(f"你输入的是{answer}")
-#     if answer == "q":
-#         print("已退出")
-#         break
-#     else:
-#         with open("records.txt","a",encoding="utf-8" ) as f:
-#             f.write(answer+"\n")
-#         count=count+1
-# print(f"你输入的次数是{count}")
+count = 0
+while True:
+    answer=input("请输入温度(输入q退出)：")
+    print(f"你输入的是{answer}")
+    if answer == "q":
+        print("已退出")
+        break
+    else:
+        with open("records.txt","a",encoding="utf-8" ) as f:
+            f.write(answer+"\n")
+        count=count+1
+print(f"你输入的次数是{count}")
 total=0
 a=0
 z=0

@@ -74,23 +74,23 @@
 #         解析时把这些行挑出来，写进新文件 alert.txt，每行格式：
 #         20:00,85
 #         提示：拼字符串 w = parts[0] + "," + parts[2]，写文件用 day07 的 with open
-# count = 0
-# while True:
-#       answer=input("请输入温度(输入q退出)：")
-#       print(f"你输入的是{answer}")
-#       if answer == "q":
-#             print("已退出")
-#             break
-#       try:
-#            s=float(answer)
-#       except ValueError:
-#            print("格式错误，请输入数字")
-#            continue
-#       else:
-#           with open("records.txt","a",encoding="utf-8" ) as f:
-#               f.write(f"{s}\n")
-#               count=count+1
-# print(f"你输入的次数是{count}")
+count = 0
+while True:
+      answer=input("请输入温度(输入q退出)：")
+      print(f"你输入的是{answer}")
+      if answer == "q":
+            print("已退出")
+            break
+      try:
+           s=float(answer)
+      except ValueError:
+           print("格式错误，请输入数字")
+           continue
+      else:
+          with open("records.txt","a",encoding="utf-8" ) as f:
+              f.write(f"{s}\n")
+              count=count+1
+print(f"你输入的次数是{count}")
 total=0
 zw=0
 zs=0
@@ -108,5 +108,4 @@ pw=zw/total
 ps=zs/total
 print("平均温度" ,pw,"℃")
 print("共",total,"条")
-print("平均湿度",ps,)
-      
+print("平均湿度",ps,)  
