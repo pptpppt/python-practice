@@ -114,7 +114,7 @@ for i in range(3):
 s=sorted(temps)
 n=len(s)
 if n%2==0:
-     t=s[n//2]
-else:
      t=(s[n//2]+s[n//2-1])/2
+else:
+     t=s[n//2]
 print(f"中位数温度：{t:.1f}")
